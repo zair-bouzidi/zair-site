@@ -1,19 +1,14 @@
 <!doctype html>
-<div class="header-center">
-  <h1>Dr. Zair Bouzidi</h1>
-  <p class="subtitle">
-    Artificial Intelligence • Data Mining • Sustainability
-  </p>
-
-  <div class="hero-buttons">
-    <a class="btn primary" href="cv.pdf" target="_blank">
-      <i class="fa fa-download"></i> Download CV
-    </a>
-    <a class="btn secondary" href="https://scholar.google.com/" target="_blank">
-      <i class="fa fa-graduation-cap"></i> Google Scholar
-    </a>
-  </div>
-</div>
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="#research">Research</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#communications">Communications</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#download-courses">Courses</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
 <head>
   <meta charset="utf-8">
@@ -38,10 +33,11 @@
 <section class="stats">
   <div>📄 15+ Publications</div>
   <div>🎤 20+ Conferences</div>
-  <div>🧑‍⚖️ Reviewer (SCI Journals)</div>
-  <div>📚 AI • Sustainability</div>
+  <div>🧑‍⚖️ Reviewer</div>
+  <div>📚 AI Research</div>
 </section>
 
+    
 <li>
   <strong>2025</strong><br>
   Article in <em>Computers in Biology and Medicine</em><br>
@@ -50,108 +46,91 @@
 
   <!-- CSS -->
   
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+/* HERO */
 .hero {
   background: linear-gradient(to right, #0a192f, #112240);
   color: white;
   padding: 40px;
-  border-radius: 0 0 20px 20px;
-}  
-
-.hero h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  opacity: 0.9;
-}
-
-.btn {
-  background: #64ffda;
-  color: #0a192f;
-  padding: 10px 15px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.btn:hover {
-  background: white;
-}
-
-section ul li {
-  background: white;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-}
-
-a {
-  transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .profile-pic {
+  width: 120px;
   border-radius: 50%;
-  transition: transform 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
 }
-
 .profile-pic:hover {
   transform: scale(1.05);
 }
 
-<section class="stats">
-  <div>📄 20+ Publications</div>
-  <div>🎤 15+ Conferences</div>
-  <div>🧑‍⚖️ Reviewer (SCI Journals)</div>
-</section>
+/* BUTTONS */
+.btn {
+  padding: 8px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.btn.primary {
+  background: #64ffda;
+  color: #0a192f;
+}
 
 .btn.secondary {
   border: 1px solid #64ffda;
   color: #64ffda;
-  background: transparent;
-}
-
-.btn {
-  padding: 8px 14px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
 }
 
 .btn:hover {
   transform: translateY(-2px);
 }
 
+/* NAVBAR */
+.navbar {
+  background: #0a192f;
+  position: sticky;
+  top: 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* STATS */
 .stats {
   display: flex;
   justify-content: space-around;
   padding: 15px;
-  background: #f5f5f5;
-  font-size: 14px;
-}
-
-#publications ul li {
   background: white;
-  padding: 15px;
-  margin-bottom: 12px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: 0.3s;
 }
 
-#publications ul li:hover {
-  transform: translateY(-3px);
-}
-
-#teaching ul {
-  columns: 2;
-  column-gap: 30px;
-}
-
+/* SECTIONS */
 section {
-  margin: 30px 0;
+  padding: 20px;
+  margin: 20px;
+  background: white;
+  border-radius: 10px;
 }
 
 section h2 {
@@ -159,23 +138,31 @@ section h2 {
   padding-left: 10px;
 }
 
-a {
-  transition: all 0.2s ease;
+/* PUBLICATIONS */
+#publications li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: 0.3s;
 }
 
-.profile-pic {
-  border-radius: 50%;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+#publications li:hover {
+  transform: translateY(-2px);
 }
 
-<footer>
-  <p>
-    © 2026 Dr. Zair Bouzidi • Artificial Intelligence Researcher  
-    • Algeria 🇩🇿
-  </p>
-</footer>
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #0a192f;
+  color: white;
+}
 
-  <!-- Fin   CSS -->
+ </style>
+</head>
+    
+    <!-- Fin   CSS -->
 
   
   <header class="hero">
@@ -204,19 +191,16 @@ a {
   </div>
 
   <!-- Navigation -->
-  <nav>
-    <a href="#research">Research</a>
-    <a href="#doctorate">Doctorate</a>
-    <a href="#communications">Communications</a>
-    <a href="#publications">Publications</a>
-    <a href="#reviewing">Reviewing</a>
-    <a href="#organizing">Organizing</a>
-    <a href="#books">Books</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#teaching">Downloading</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="#research">Research</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#communications">Communications</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#download-courses">Courses</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
   <!-- Sections -->
   <main>
     <section id="research">
